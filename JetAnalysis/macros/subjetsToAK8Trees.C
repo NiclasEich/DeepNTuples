@@ -62,7 +62,7 @@ struct ak8jetstruct {
 void readEvent(TString fname1, TString fname2, TString outname) {
 
 	TFile *f = new TFile(fname1);
-	TTree *t1 = (TTree*)f->Get("deepntuplizer/tree");
+	TTree *t1 = (TTree*)f->Get("DeepJetNTupler/DeepJetvars");
 
 	TFile *f_s = new TFile(fname2);
 	TTree *t_s = (TTree*)f_s->Get("tree");
