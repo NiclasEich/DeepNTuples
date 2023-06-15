@@ -109,7 +109,7 @@ int main(int argc, char *argv[]){
     //simple opt parsing
     TString helpmessage="\n\
 	run this program with:\n \
-	<nEntriesPerFile (about 400k is a good choice)> <outputdir> <input sample.txt 0> <input sample.txt 1> <input sample.txt 2> ...\
+	<nEntriesPerFile (about 100k is a good choice)> <outputdir> <input sample.txt 0> <input sample.txt 1> <input sample.txt 2> ...\
 			 ";
 
     if(argc < 4 || atof(argv[1]) == 0){
@@ -148,7 +148,7 @@ int main(int argc, char *argv[]){
     for(size_t i=0;i<infiles.size();i++){
         for(const auto& f:infiles.at(i)){
             TString xrootdedpath=prependXRootD(f);
-            chains.at(i)->Add(xrootdedpath+"/deepntuplizer/tree");
+            chains.at(i)->Add(xrootdedpath+"/DeepJetNTupler/DeepJetvars");
         }
         for(auto& bi:branchinfos){
             bi->setIsRead(true);

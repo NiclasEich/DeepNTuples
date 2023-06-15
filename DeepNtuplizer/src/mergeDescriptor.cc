@@ -152,7 +152,7 @@ std::vector<TChain* > mergeDescriptor::createChains(
             TString xrootdedpath=f;
             if(usexrootd)
                 xrootdedpath=prependXRootD(xrootdedpath);
-            chains.at(i)->Add(xrootdedpath+"/deepntuplizer/tree");
+            chains.at(i)->Add(xrootdedpath+"/DeepJetNTupler/DeepJetvars");
         }
         for(auto& bi:branchinfos){
             bi->setIsRead(true);
